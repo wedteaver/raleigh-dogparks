@@ -1,13 +1,18 @@
 const express = require('express');
 const request = require('request');
 const cloudinary = require('cloudinary');
-
+const CLOUDINARY_NAME1 = 'ddmeofkzu';
+const CLOUDINARY_KEY1 = '833162614866536';
+const CLOUDINARY_SECRET1 = '7bChKulxDSPFbLgqSxIsSv3Gcew';
 const router = express.Router();
 
 cloudinary.config({ 
-  cloud_name: process.env.CLOUDINARY_NAME, 
-  api_key: process.env.CLOUDINARY_KEY, 
-  api_secret: process.env.CLOUDINARY_SECRET 
+  cloud_name: CLOUDINARY_NAME1, 
+  api_key: CLOUDINARY_KEY1, 
+  api_secret: CLOUDINARY_SECRET1 
+  //cloud_name: process.env.CLOUDINARY_NAME, 
+  //api_key: process.env.CLOUDINARY_KEY, 
+  //api_secret: process.env.CLOUDINARY_SECRET
 });
 
 router.get('/', function(req, res) {
